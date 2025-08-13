@@ -7,7 +7,7 @@ export const ProductSchema = z.object({
   price: z.string(),
 });
 
-const PatternSchema = z.object({
+export const PatternSchema = z.object({
   name: z.string(),
   pattern: RequiredPatternSchema,
   product: ProductSchema.nullable(),

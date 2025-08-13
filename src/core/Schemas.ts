@@ -503,7 +503,7 @@ export const ClientJoinMessageSchema = z.object({
   lastTurn: z.number(), // The last turn the client saw.
   username: UsernameSchema,
   flag: FlagSchema,
-  pattern: PatternSchema,
+  patternName: z.string().optional(),
 });
 
 export const ClientMessageSchema = z.discriminatedUnion("type", [
